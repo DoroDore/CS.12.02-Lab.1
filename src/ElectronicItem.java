@@ -8,4 +8,28 @@ public class ElectronicItem extends CISItem{
         this.maker = maker;
         this.operatingSystem = operatingSystem;
     }
+    public void setStorageCapacity(int storageCapacity) {
+        this.storageCapacity = storageCapacity;
+    }
+    public int getStorageCapacity() {
+        return storageCapacity;
+    }
+    public void setModel(String model) {
+        this.model = model;
+    }
+    public String getModel() {
+        return model;
+    }
+    public void setMaker(String maker) {
+        this.maker = maker;
+    }
+    public String getMaker() {
+        return maker;
+    }
+    public void setOperatingSystem(String operatingSystem) {
+        this.operatingSystem = operatingSystem;
+    }
+    public String getOperatingSystem() {
+        return operatingSystem;
+    }
 }

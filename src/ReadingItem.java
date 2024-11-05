@@ -7,4 +7,22 @@ public class ReadingItem extends CISItem{
         this.datePublished = datePublished;
         this.author = author;
     }
+    public void setWordCount(int wordCount) {
+        this.wordCount = wordCount;
+    }
+    public int getWordCount() {
+        return wordCount;
+    }
+    public void setDatePublished(String datePublished) {
+        this.datePublished = datePublished;
+    }
+    public String getDatePublished() {
+        return datePublished;
+    }
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+    public String getAuthor() {
+        return author;
+    }
 }
