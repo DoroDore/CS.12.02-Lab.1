@@ -58,6 +58,83 @@ public class Store {
                     case "price":
                         item.setPrice(Double.parseDouble(value));
                         break;
+                    case "wordCount":
+                        if (item instanceof ReadingItem) {
+                            ((ReadingItem) item).setWordCount(Integer.parseInt(value));
+                        }
+                        break;
+                    case "datePublished":
+                        if (item instanceof ReadingItem) {
+                            ((ReadingItem) item).setDatePublished(value);
+                        }
+                        break;
+                    case "author":
+                        if (item instanceof ReadingItem) {
+                            ((ReadingItem) item).setAuthor(value);
+                        }
+                        break;
+                    case "coverStoryTitle":
+                        if (item instanceof Magazine) {
+                            ((Magazine) item).setCoverStoryTitle(value);
+                        }
+                        break;
+                    case "printDate": //This is more logic than actual stuff lol
+                        if (item instanceof Magazine) {
+                            throw new IllegalArgumentException("Cannot update print date");
+                        }
+                        break;
+                    case "isbn":
+                        if (item instanceof Book) {
+                            ((Book) item).setIsbn(value);
+                        }
+                        break;
+                    case "edition":
+                        if (item instanceof Book) {
+                            throw new IllegalArgumentException("Cannot update edition");
+                        }
+                        break;
+                    case "title": //This is more logic than actual stuff lol
+                        if (item instanceof Book) {
+                            throw new IllegalArgumentException("Cannot update title");
+                        }
+                        break;
+                    case "storageCapacity":
+                        if (item instanceof ElectronicItem) {
+                            ((ElectronicItem) item).setStorageCapacity(Integer.parseInt(value));
+                        }
+                        break;
+                    case "model":
+                        if (item instanceof ElectronicItem) {
+                            ((ElectronicItem) item).setModel(value);
+                        }
+                        break;
+                    case "maker":
+                        if (item instanceof ElectronicItem) {
+                            ((ElectronicItem) item).setMaker(value);
+                        }
+                        break;
+                    case "operatingSystem":
+                        if (item instanceof ElectronicItem) {
+                            ((ElectronicItem) item).setOperatingSystem(value);
+                        }
+                        break;
+                    case "networkType":
+                        if (item instanceof Phone) {
+                            ((Phone) item).setNetworkType(value);
+                        }
+                        break;
+                    case "screenSize":
+                        if (item instanceof Phone) {
+                            ((Phone) item).setScreenSize(Double.parseDouble(value));
+                        }
+                        break;
+                    case "version":
+                        if (item instanceof Arduino) {
+                            ((Arduino) item).setVersion(value);
+                        }
+                        break;
+                    default:
+                        throw new IllegalArgumentException("Invalid property");
                 }
             }
         }

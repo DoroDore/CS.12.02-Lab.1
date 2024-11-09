@@ -4,4 +4,7 @@ public class Arduino extends ElectronicItem{
         super(name, location, description, price, storageCapacity, model, maker, operatingSystem);
         this.version = version;
     }
+    public void setVersion(String version) {
+        this.version = version;
+    }
 }

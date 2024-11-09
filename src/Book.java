@@ -6,4 +6,7 @@ public class Book extends ReadingItem{
         this.edition = edition;
         this.title = title;
     }
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
+    }
 }
